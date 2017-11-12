@@ -57,7 +57,5 @@ promise.then((links)=>{
     //console.log(i," " + linksParsed[i]);
     //nightmare.goto().end().then().catch((error)=>{
       //console.error('Failure:', error);
-  });
   }
-
 });
