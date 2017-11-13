@@ -35,6 +35,7 @@ let promise = new Promise((resolve, reject)=>{
 promise.then((links)=>{
    //remove cdn links
     links = removeCDN(links);
+    //TODO check falsey values and report whether any links are broken
     //remove falsey values
     let linksCompact = _.compact(links);
     //remove and duplicate links
@@ -54,6 +55,7 @@ promise.then((links)=>{
     }
     //not working correclty...ideally should close out when all the urls have
     //been navigated to
+    //TODO Fix
   ).then(()=>{
     nightmare.halt(err, ()=>{console.log('nightmare successfully closed')})
   })
